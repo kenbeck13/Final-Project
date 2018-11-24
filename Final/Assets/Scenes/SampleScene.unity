@@ -928,7 +928,7 @@ MonoBehaviour:
   isOpen: 0
   checkSwitches: 0
   speed: 100
-  killTimer: 0
+  killTimer: 6
 --- !u!50 &1223851778
 Rigidbody2D:
   serializedVersion: 4
@@ -1335,7 +1335,7 @@ MonoBehaviour:
   isOpen: 0
   checkSwitches: 0
   speed: 100
-  killTimer: 0
+  killTimer: 6
 --- !u!212 &2044077741
 SpriteRenderer:
   m_ObjectHideFlags: 0
