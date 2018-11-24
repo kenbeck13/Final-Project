@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour {
 
+	//2D movement from class
 	Rigidbody2D rb;
 	public Vector2 velocity;
 	public float speed, gravityUp, gravityDown, jumpVelocity, downVelocityMax;
+	//how many jumps the player has made
 	public int jumps;
+	//how many jumps the player can make
 	public int maxJumps;
 
 	// Use this for initialization

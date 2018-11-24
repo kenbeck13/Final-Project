@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour {
 
+	//is the switch on?
 	public bool isOn;
+	//will the switch stay on when the player moves off of it?
 	public bool isPermanent;
+	//what door this switch opens
+	public Door attachedDoor;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +27,7 @@ public class Switch : MonoBehaviour {
 		{
 			if (!isOn) {
 				isOn = true;
+				attachedDoor.checkSwitches = true;
 			}
 		}
 	}
