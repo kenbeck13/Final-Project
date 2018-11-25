@@ -27,7 +27,14 @@ public class Switch : MonoBehaviour {
 		{
 			if (!isOn) {
 				isOn = true;
-				attachedDoor.checkSwitches = true;
+				attachedDoor.CheckForSwitches();
+			}
+		} 
+		else if (collision.gameObject.tag == "Pointer")
+		{
+			if (!isOn) {
+				isOn = true;
+				attachedDoor.CheckForSwitches ();
 			}
 		}
 	}
@@ -35,6 +42,13 @@ public class Switch : MonoBehaviour {
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		if (collision.gameObject.tag == "Player")
+		{
+			if (isOn && !isPermanent) {
+				isOn = false;
+			}
+		}
+
+		else if (collision.gameObject.tag == "Pointer")
 		{
 			if (isOn && !isPermanent) {
 				isOn = false;

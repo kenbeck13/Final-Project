@@ -10,8 +10,6 @@ public class Door : MonoBehaviour {
 	public bool isOpen;
 	//how many switches are on during check
 	int onSwitches;
-	//turning on a switch makes CheckForSwitches() run
-	public bool checkSwitches;
 	//Rigidbody2D
 	Rigidbody2D rb;
 	//speed the door moves when open
@@ -26,9 +24,6 @@ public class Door : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		while (!isOpen && checkSwitches) {
-			CheckForSwitches ();
-		}
 
 		if (isOpen) {
 			rb.velocity = transform.up * speed * Time.deltaTime;
@@ -43,18 +38,16 @@ public class Door : MonoBehaviour {
 	/// <summary>
 	/// Checks if the switches assigned to the door are all pressed.
 	/// </summary>
-	void CheckForSwitches(){
+	public void CheckForSwitches(){
 		for (int i = 0; i < switches.Length; i++) {
 			if (switches [i].isOn) {
 				onSwitches++;
 			} else {
 				onSwitches = 0;
-				checkSwitches = false;
 				return;
 			}
 			if (onSwitches == switches.Length) {
 				isOpen = true;
-				checkSwitches = false;
 				return;
 			}
 		}
