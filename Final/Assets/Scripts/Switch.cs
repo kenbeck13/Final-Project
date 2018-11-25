@@ -11,14 +11,23 @@ public class Switch : MonoBehaviour {
 	//what door this switch opens
 	public Door attachedDoor;
 
+	public Sprite[] sprites;
+
+	SpriteRenderer rend;
+
 	// Use this for initialization
 	void Start () {
-		
+		rend = GetComponent<SpriteRenderer> ();
+		rend.sprite = sprites [0];
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (isOn) {
+			rend.sprite = sprites [1];
+		} else {
+			rend.sprite = sprites [0];
+		}
 	}
 
 	private void OnTriggerStay2D(Collider2D collision)
