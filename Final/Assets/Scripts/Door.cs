@@ -35,7 +35,7 @@ public class Door : MonoBehaviour {
 		}
 
 		if (isOpen && !isVertical) {
-			rb.velocity = transform.right * speed * Time.deltaTime;
+			rb.velocity = transform.right * speed * Time.deltaTime * -1;
 			killTimer -= Time.deltaTime;
 		}
 
