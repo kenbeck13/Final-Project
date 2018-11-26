@@ -16,6 +16,8 @@ public class Door : MonoBehaviour {
 	public float speed;
 	//how long it takes for the door to disappear
 	public float killTimer;
+	//diamond attached to the door
+	public SpriteRenderer diamond;
 
 	// Use this for initialization
 	void Start () {

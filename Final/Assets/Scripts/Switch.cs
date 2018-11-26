@@ -10,13 +10,18 @@ public class Switch : MonoBehaviour {
 	public bool isPermanent;
 	//what door this switch opens
 	public Door attachedDoor;
-
+	//on/off sprites
 	public Sprite[] sprites;
 
 	SpriteRenderer rend;
 
+	//the white switch sprite attached to this switch
+	public SpriteRenderer blankSwitch;
+
 	// Use this for initialization
 	void Start () {
+		Color doorColor = attachedDoor.diamond.color;
+		blankSwitch.color = doorColor;
 		rend = GetComponent<SpriteRenderer> ();
 		rend.sprite = sprites [0];
 	}
