@@ -37,4 +37,13 @@ public class MousePointer : MonoBehaviour {
 		transform.position = mousePos;
 		pointerTimer -= Time.deltaTime;
 	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "EnergyShield") {
+			rend.enabled = false;
+			col.enabled = false;
+		}
+	}
+
 }

@@ -437,6 +437,97 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &110358902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 110358903}
+  - component: {fileID: 110358905}
+  - component: {fileID: 110358904}
+  m_Layer: 0
+  m_Name: Energy Shield
+  m_TagString: EnergyShield
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &110358903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110358902}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 2.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1814810945}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &110358904
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110358902}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!212 &110358905
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110358902}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 21300000, guid: 1c3418e6a6e3941408d2f9785eec2538, type: 3}
+  m_Color: {r: 0.8366575, g: 0.23082057, b: 0.8584906, a: 0.3647059}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &118998725
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +638,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: a90d42ff33a790845aaee25c21a59e33, type: 3}
   - {fileID: 21300000, guid: 91cdac1540b66b749861556387fe016c, type: 3}
+  isShielded: 0
   blankSwitch: {fileID: 1265667427}
 --- !u!61 &119099558
 BoxCollider2D:
@@ -1590,6 +1682,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: a90d42ff33a790845aaee25c21a59e33, type: 3}
   - {fileID: 21300000, guid: 91cdac1540b66b749861556387fe016c, type: 3}
+  isShielded: 0
   blankSwitch: {fileID: 1550694694}
 --- !u!61 &330369935
 BoxCollider2D:
@@ -2711,6 +2804,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: a90d42ff33a790845aaee25c21a59e33, type: 3}
   - {fileID: 21300000, guid: 91cdac1540b66b749861556387fe016c, type: 3}
+  isShielded: 0
   blankSwitch: {fileID: 1935680280}
 --- !u!61 &638696286
 BoxCollider2D:
@@ -2936,7 +3030,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 6
 --- !u!114 &702566547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2954,7 +3048,7 @@ MonoBehaviour:
   speed: 100
   killTimer: 6
   diamond: {fileID: 236728064}
-  isVertical: 1
+  isVertical: 0
 --- !u!212 &702566548
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4046,6 +4140,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: a90d42ff33a790845aaee25c21a59e33, type: 3}
   - {fileID: 21300000, guid: 91cdac1540b66b749861556387fe016c, type: 3}
+  isShielded: 0
   blankSwitch: {fileID: 649404977}
 --- !u!4 &1220161926
 Transform:
@@ -4536,6 +4631,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: a90d42ff33a790845aaee25c21a59e33, type: 3}
   - {fileID: 21300000, guid: 91cdac1540b66b749861556387fe016c, type: 3}
+  isShielded: 0
   blankSwitch: {fileID: 548972885}
 --- !u!61 &1288416301
 BoxCollider2D:
@@ -4658,6 +4754,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: a90d42ff33a790845aaee25c21a59e33, type: 3}
   - {fileID: 21300000, guid: 91cdac1540b66b749861556387fe016c, type: 3}
+  isShielded: 0
   blankSwitch: {fileID: 1276390989}
 --- !u!61 &1291049817
 BoxCollider2D:
@@ -5357,6 +5454,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: a90d42ff33a790845aaee25c21a59e33, type: 3}
   - {fileID: 21300000, guid: 91cdac1540b66b749861556387fe016c, type: 3}
+  isShielded: 0
   blankSwitch: {fileID: 961886092}
 --- !u!61 &1614186690
 BoxCollider2D:
@@ -5479,6 +5577,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: a90d42ff33a790845aaee25c21a59e33, type: 3}
   - {fileID: 21300000, guid: 91cdac1540b66b749861556387fe016c, type: 3}
+  isShielded: 0
   blankSwitch: {fileID: 1607205115}
 --- !u!61 &1667338016
 BoxCollider2D:
@@ -5904,6 +6003,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: a90d42ff33a790845aaee25c21a59e33, type: 3}
   - {fileID: 21300000, guid: 91cdac1540b66b749861556387fe016c, type: 3}
+  isShielded: 1
   blankSwitch: {fileID: 995744495}
 --- !u!61 &1814810943
 BoxCollider2D:
@@ -5988,6 +6088,7 @@ Transform:
   m_Children:
   - {fileID: 1407319902}
   - {fileID: 995744496}
+  - {fileID: 110358903}
   m_Father: {fileID: 0}
   m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6453,6 +6554,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: a90d42ff33a790845aaee25c21a59e33, type: 3}
   - {fileID: 21300000, guid: 91cdac1540b66b749861556387fe016c, type: 3}
+  isShielded: 0
   blankSwitch: {fileID: 964325837}
 --- !u!61 &2029832992
 BoxCollider2D:

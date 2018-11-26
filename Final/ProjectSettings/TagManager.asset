@@ -8,6 +8,7 @@ TagManager:
   - Pointer
   - Door
   - Box
+  - EnergyShield
   layers:
   - Default
   - TransparentFX

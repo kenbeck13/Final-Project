@@ -12,6 +12,8 @@ public class Switch : MonoBehaviour {
 	public Door attachedDoor;
 	//on/off sprites
 	public Sprite[] sprites;
+	//is this switch shielded?
+	public bool isShielded;
 
 	SpriteRenderer rend;
 
@@ -44,7 +46,7 @@ public class Switch : MonoBehaviour {
 				attachedDoor.CheckForSwitches();
 			}
 		} 
-		else if (collision.gameObject.tag == "Pointer")
+		else if (collision.gameObject.tag == "Pointer" && !isShielded)
 		{
 			if (!isOn) {
 				isOn = true;
@@ -68,7 +70,7 @@ public class Switch : MonoBehaviour {
 				isOn = false;
 			}
 		}
-		else if (collision.gameObject.tag == "Pointer")
+		else if (collision.gameObject.tag == "Pointer" && !isShielded)
 		{
 			if (isOn && !isPermanent) {
 				isOn = false;
