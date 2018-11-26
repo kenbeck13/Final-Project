@@ -18,6 +18,8 @@ public class Door : MonoBehaviour {
 	public float killTimer;
 	//diamond attached to the door
 	public SpriteRenderer diamond;
+	//is this door vertical?
+	public bool isVertical;
 
 	// Use this for initialization
 	void Start () {
@@ -27,8 +29,13 @@ public class Door : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (isOpen) {
+		if (isOpen && isVertical) {
 			rb.velocity = transform.up * speed * Time.deltaTime;
+			killTimer -= Time.deltaTime;
+		}
+
+		if (isOpen && !isVertical) {
+			rb.velocity = transform.right * speed * Time.deltaTime;
 			killTimer -= Time.deltaTime;
 		}
 
