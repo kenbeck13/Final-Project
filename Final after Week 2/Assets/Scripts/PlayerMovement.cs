@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		//jump logic
 		if(Input.GetButtonDown("Jump") == true && jumps > 0){
-            Jump();
+            Jump(1.0f);
 		}
 
 		rb.MovePosition(rb.position + velocity * Time.deltaTime);
@@ -46,9 +46,9 @@ public class PlayerMovement : MonoBehaviour {
 
 	}
 
-    private void Jump(){
+	private void Jump(float power){
         //jump logic
-        velocity.y = jumpVelocity;
+        velocity.y = jumpVelocity * power;
         jumps--;
     }
 
@@ -61,13 +61,13 @@ public class PlayerMovement : MonoBehaviour {
 					velocity.y = 0;
 					if (contact.normal.y >= 0) {
 						jumps = maxJumps;
+						if(collision.gameObject.tag == "Slime"){
+							Slime slimeScript = collision.gameObject.GetComponent<Slime>();
+							if(!slimeScript.isFrozen){
+								Jump(1.4f);
+							}
+						}
 					}
-                    if(collision.gameObject.tag == "Slime"){
-                        Slime slimeScript = collision.gameObject.GetComponent<Slime>();
-                        if(!slimeScript.isFrozen){
-                            Jump();
-                        }
-                    }
 				} 
 			}
 		}

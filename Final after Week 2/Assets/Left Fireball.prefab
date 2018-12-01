@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58607104041761944}
   - component: {fileID: 114797686217722782}
   - component: {fileID: 50382561905453088}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Left Fireball
   m_TagString: Fire
   m_Icon: {fileID: 0}
@@ -127,9 +127,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1c3418e6a6e3941408d2f9785eec2538, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7dbc6ae4112fefe41b6f43f8f6f03421, type: 3}
   m_Color: {r: 0.9528302, g: 0.46326151, b: 0.15730685, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}

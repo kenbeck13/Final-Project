@@ -16,9 +16,12 @@ public class PlayerInfo : MonoBehaviour {
     PlayerMovement movementScript;
     public float shootTimerMax;
     float shootTimer;
+	public Vector3 fireballSpawnDistance;
+	SpriteRenderer rend;
 
 	// Use this for initialization
 	void Start () {
+		rend = GetComponent<SpriteRenderer> ();
         lightningAura.SetActive(false);
         isFacingRight = true;
         movementScript = GetComponent<PlayerMovement>();
@@ -32,13 +35,20 @@ public class PlayerInfo : MonoBehaviour {
             isFacingRight = false;
         }
 
+		if (isFacingRight)
+		{
+			rend.flipX = false;
+		}else{
+			rend.flipX = true;
+		}
+
 		//left click to shoot fire
         if(Input.GetMouseButtonDown(0) && hasFire && shootTimer < 0){
             if (isFacingRight)
             {
-                Instantiate(rightFireballPrefab, transform.position, Quaternion.identity);
+				Instantiate(rightFireballPrefab, transform.position + fireballSpawnDistance, Quaternion.identity);
             }else{
-                Instantiate(leftFireballPrefab, transform.position, Quaternion.identity);
+				Instantiate(leftFireballPrefab, transform.position - fireballSpawnDistance, Quaternion.identity);
             }
             shootTimer = shootTimerMax;
         }

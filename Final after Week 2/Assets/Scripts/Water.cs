@@ -9,11 +9,9 @@ public class Water : MonoBehaviour {
     public Color waterColor;
     public Color iceColor;
     public Color electricColor;
-    public bool electrified;
     public float iceTimerMax;
     float iceTimer;
-    public float electricTimerMax;
-    float electricTimer;
+	Conductor attachedConductor;
 
 	// Use this for initialization
 	void Start () {
@@ -21,22 +19,26 @@ public class Water : MonoBehaviour {
         col = GetComponent<BoxCollider2D>();
         col.isTrigger = true;
         rend.color = waterColor;
+		attachedConductor = GetComponent<Conductor> ();
+		Debug.Log ("Attached Conductor: " + attachedConductor.gameObject.name);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if(iceTimer < 0){
-            col.isTrigger = true;
-        }
-        if (electricTimer < 0)
-        {
-            electrified = false;
-        }
-        if(iceTimer < 0 && electricTimer < 0){
+		if (iceTimer < 0) {
+			col.isTrigger = true;
+		} else {
+			col.isTrigger = false;
+		}
+		if(iceTimer < 0 && !attachedConductor.isPowered){
             rend.color = waterColor;
         }
+		if (attachedConductor.isPowered) {
+			rend.color = electricColor;
+			col.isTrigger = true;
+		}
+
         iceTimer -= Time.deltaTime;
-        electricTimer -= Time.deltaTime;
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,16 +47,13 @@ public class Water : MonoBehaviour {
         {
             rend.color = iceColor;
             col.isTrigger = false;
-            electrified = false;
             iceTimer = iceTimerMax;
         }
 
         if (collision.gameObject.tag == "Lightning")
         {
             rend.color = electricColor;
-            electrified = true;
             col.isTrigger = true;
-            electricTimer = electricTimerMax;
         }
     }
 }

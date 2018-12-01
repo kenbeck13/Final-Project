@@ -17,14 +17,12 @@ public class Switch : MonoBehaviour {
 
 	SpriteRenderer rend;
 
-	//the white switch sprite attached to this switch
-	public SpriteRenderer blankSwitch;
 
 	// Use this for initialization
 	void Start () {
-		Color doorColor = attachedDoor.diamond.color;
-		blankSwitch.color = doorColor;
 		rend = GetComponent<SpriteRenderer> ();
+		Color doorColor = attachedDoor.diamond.color;
+		rend.color = doorColor;
 		rend.sprite = sprites [0];
 	}
 	

@@ -37,7 +37,7 @@ public class Slime : MonoBehaviour {
         //gravity logic
         if (!isFrozen)
         {
-            rb.constraints = RigidbodyConstraints2D.None;
+			rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX | ~RigidbodyConstraints2D.FreezePositionY;
             if (velocity.y > 0)
             {
                 velocity.y -= gravityUp * Time.deltaTime;
@@ -48,7 +48,7 @@ public class Slime : MonoBehaviour {
             }
             rb.MovePosition(rb.position + velocity * Time.deltaTime);
         } else{
-            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            rb.constraints &= RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         }
         iceTimer -= Time.deltaTime;
 
