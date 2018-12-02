@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInfo : MonoBehaviour {
 
@@ -18,6 +19,8 @@ public class PlayerInfo : MonoBehaviour {
     float shootTimer;
 	public Vector3 fireballSpawnDistance;
 	SpriteRenderer rend;
+	Scene currentScene;
+	string currentSceneName;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +28,9 @@ public class PlayerInfo : MonoBehaviour {
         lightningAura.SetActive(false);
         isFacingRight = true;
         movementScript = GetComponent<PlayerMovement>();
+
+		currentScene = SceneManager.GetActiveScene ();
+		currentSceneName = currentScene.name;
 	}
 	
 	// Update is called once per frame
@@ -56,10 +62,15 @@ public class PlayerInfo : MonoBehaviour {
         if(Input.GetKey(KeyCode.LeftShift) && hasLightning){
             lightningAura.SetActive(true);
         }
-        if(Input.GetKeyUp(KeyCode.LeftShift)){
+		if(Input.GetKeyUp(KeyCode.LeftShift) && hasLightning){
             lightningAura.SetActive(false);
             inWater = false;
         }
+
+		if (Input.GetKeyDown (KeyCode.R)) {
+			SceneManager.LoadScene (currentSceneName);
+		}
+
         shootTimer -= Time.deltaTime;
 	}
 
@@ -81,6 +92,12 @@ public class PlayerInfo : MonoBehaviour {
             }
             Destroy(collision.gameObject);
         }
+
+		if (collision.gameObject.tag == "Star")
+		{
+			Star starScript = collision.gameObject.GetComponent<Star> ();
+			SceneManager.LoadScene (starScript.loadScene);
+		}
     }
 
     private void OnTriggerExit2D(Collider2D collision)

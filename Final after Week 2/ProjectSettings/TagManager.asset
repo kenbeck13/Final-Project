@@ -15,6 +15,7 @@ TagManager:
   - Lightning
   - Spellbook
   - Wooden Box
+  - Star
   layers:
   - Default
   - TransparentFX
