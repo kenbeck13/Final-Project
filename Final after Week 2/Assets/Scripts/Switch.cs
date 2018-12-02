@@ -51,6 +51,13 @@ public class Switch : MonoBehaviour {
 				attachedDoor.CheckForSwitches ();
 			}
 		}
+		else if (collision.gameObject.tag == "Slime")
+		{
+			if (!isOn) {
+				isOn = true;
+				attachedDoor.CheckForSwitches();
+			}
+		} 
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
@@ -62,6 +69,12 @@ public class Switch : MonoBehaviour {
 			}
 		}
 		else if (collision.gameObject.tag == "Box")
+		{
+			if (isOn && !isPermanent) {
+				isOn = false;
+			}
+		}
+		else if (collision.gameObject.tag == "Slime")
 		{
 			if (isOn && !isPermanent) {
 				isOn = false;
