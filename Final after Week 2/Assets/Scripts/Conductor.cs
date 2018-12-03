@@ -75,7 +75,7 @@ public class Conductor : MonoBehaviour {
 				isElectrified = true;
 			}
 		}
-		if (collision.gameObject.tag == "Fire") {
+		if (collision.gameObject.tag == "Fire" && !isWater) {
 			Destroy (collision.gameObject);
 		}
 	}

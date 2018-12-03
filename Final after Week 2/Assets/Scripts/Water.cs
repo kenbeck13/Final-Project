@@ -12,6 +12,7 @@ public class Water : MonoBehaviour {
     public float iceTimerMax;
     float iceTimer;
 	Conductor attachedConductor;
+	public bool startsAsIce;
 
 	// Use this for initialization
 	void Start () {
@@ -20,17 +21,20 @@ public class Water : MonoBehaviour {
         col.isTrigger = true;
         rend.color = waterColor;
 		attachedConductor = GetComponent<Conductor> ();
-		Debug.Log ("Attached Conductor: " + attachedConductor.gameObject.name);
+		if (startsAsIce) {
+			col.isTrigger = false;
+			rend.color = iceColor;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (iceTimer < 0) {
+		if (iceTimer < 0 && !startsAsIce) {
 			col.isTrigger = true;
 		} else {
 			col.isTrigger = false;
 		}
-		if(iceTimer < 0 && !attachedConductor.isPowered){
+		if(iceTimer < 0 && !attachedConductor.isPowered && !startsAsIce){
             rend.color = waterColor;
         }
 		if (attachedConductor.isPowered) {
@@ -55,5 +59,12 @@ public class Water : MonoBehaviour {
             rend.color = electricColor;
             col.isTrigger = true;
         }
+		if (collision.gameObject.tag == "Fire")
+		{
+			startsAsIce = false;
+			rend.color = waterColor;
+			col.isTrigger = true;
+			Destroy (collision.gameObject);
+		}
     }
 }

@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212212357208138250}
   - component: {fileID: 114563142964541760}
   - component: {fileID: 50271400498648968}
-  - component: {fileID: 61786234848580642}
   - component: {fileID: 114815557762830530}
+  - component: {fileID: 70762334675545796}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -181,8 +181,8 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!61 &61786234848580642
-BoxCollider2D:
+--- !u!70 &70762334675545796
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -193,19 +193,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.065271854}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.988, y: 1.849}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.7506227}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.988, y: 1.739492}
+  m_Direction: 0
 --- !u!81 &81825182323106022
 AudioListener:
   m_ObjectHideFlags: 1
@@ -255,6 +245,7 @@ MonoBehaviour:
   isFacingRight: 0
   shootTimerMax: 0.5
   fireballSpawnDistance: {x: 1, y: 0, z: 0}
+  noMagic: 0
 --- !u!212 &212212357208138250
 SpriteRenderer:
   m_ObjectHideFlags: 1
