@@ -82,6 +82,9 @@ MonoBehaviour:
   iceTimerMax: 5
   moveSpeed: -6
   killTimer: 10
+  sprites:
+  - {fileID: 21300000, guid: 8463770bb995ee34ca4b81cecb004b84, type: 3}
+  - {fileID: 21300000, guid: fe310389895c3574299fe0fadc3f0887, type: 3}
 --- !u!212 &212229362036757708
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -172,7 +172,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4471175847725086, guid: 02ebdea87e05e8d45bec72a62b047e21, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.256
       objectReference: {fileID: 0}
     - target: {fileID: 4471175847725086, guid: 02ebdea87e05e8d45bec72a62b047e21, type: 2}
       propertyPath: m_LocalPosition.z
@@ -207,6 +207,16 @@ Prefab:
         type: 2}
       propertyPath: hasIce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70762334675545796, guid: 02ebdea87e05e8d45bec72a62b047e21,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.026164293
+      objectReference: {fileID: 0}
+    - target: {fileID: 70762334675545796, guid: 02ebdea87e05e8d45bec72a62b047e21,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.6871635
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02ebdea87e05e8d45bec72a62b047e21, type: 2}

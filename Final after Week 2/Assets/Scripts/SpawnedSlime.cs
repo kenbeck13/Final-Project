@@ -10,10 +10,12 @@ public class SpawnedSlime : MonoBehaviour {
     float iceTimer;
     public float moveSpeed;
     public float killTimer;
+    SpriteRenderer rend;
+    public Sprite[] sprites;
 
     // Use this for initialization
     void Start () {
-        
+        rend = GetComponent<SpriteRenderer>();
     }
     
     // Update is called once per frame
@@ -24,8 +26,13 @@ public class SpawnedSlime : MonoBehaviour {
         }
 
         if(!isFrozen){
-            transform.position = transform.position + (new Vector3(0, moveSpeed, 0) * Time.deltaTime); 
+            transform.position = transform.position + (new Vector3(0, moveSpeed, 0) * Time.deltaTime);
+            rend.sprite = sprites[0];
+        }else{
+            rend.sprite = sprites[1];
         }
+
+
         iceTimer -= Time.deltaTime;
         killTimer -= Time.deltaTime;
 
