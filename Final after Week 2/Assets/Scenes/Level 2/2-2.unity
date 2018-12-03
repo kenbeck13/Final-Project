@@ -2768,6 +2768,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 114629435922386942, guid: ff7153387e1fed944901acdd99d8e3ad,
+        type: 2}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: c57755b9446c82948aa002c7afd2ff6b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff7153387e1fed944901acdd99d8e3ad, type: 2}
   m_IsPrefabAsset: 0

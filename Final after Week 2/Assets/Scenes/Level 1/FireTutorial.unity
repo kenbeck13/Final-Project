@@ -118,6 +118,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4471175847725086, guid: 02ebdea87e05e8d45bec72a62b047e21,
     type: 2}
   m_PrefabInternal: {fileID: 1239823980}
+--- !u!114 &15637779 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 1423064578}
+  m_Script: {fileID: 11500000, guid: 9dbd8b12a87d0c348b2f42cf44544e01, type: 3}
+--- !u!4 &15637782 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 1423064578}
 --- !u!1 &57143327
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,10 +159,10 @@ RectTransform:
   m_Father: {fileID: 83548474}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 131.84}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.4, y: 0.72200006}
+  m_AnchorMax: {x: 0.60875005, y: 0.77300006}
+  m_AnchoredPosition: {x: -3.5, y: 1.3399963}
+  m_SizeDelta: {x: -7, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &57143329
 MonoBehaviour:
@@ -185,7 +196,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Left click to shoot a fireball!
+  m_Text: Left click to shoot a fireball.
 --- !u!222 &57143330
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -193,6 +204,68 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 57143327}
   m_CullTransparentMesh: 0
+--- !u!1001 &78554050
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2098155022}
+    m_Modifications:
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.6847553
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.3027618
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.078125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.data[0]
+      value: 
+      objectReference: {fileID: 2126073887}
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.data[1]
+      value: 
+      objectReference: {fileID: 1658709458}
+    - target: {fileID: 212266847563616682, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &83548473
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +360,72 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &206458101
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2098155022}
+    m_Modifications:
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.6847553
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.6972382
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.078125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896206273915362, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_Name
+      value: Burnable (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.data[0]
+      value: 
+      objectReference: {fileID: 380629654}
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 212266847563616682, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &308333400
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,8 +486,85 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &380629654 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 1599398858}
+  m_Script: {fileID: 11500000, guid: 9dbd8b12a87d0c348b2f42cf44544e01, type: 3}
+--- !u!4 &380629657 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 1599398858}
+--- !u!1001 &448003248
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2098155022}
+    m_Modifications:
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.6847553
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.30276185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.078125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896206273915362, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_Name
+      value: Burnable (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.data[0]
+      value: 
+      objectReference: {fileID: 2034304739}
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.data[1]
+      value: 
+      objectReference: {fileID: 380629654}
+    - target: {fileID: 212266847563616682, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1239823980
 Prefab:
   m_ObjectHideFlags: 0
@@ -386,7 +602,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4471175847725086, guid: 02ebdea87e05e8d45bec72a62b047e21, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114815557762830530, guid: 02ebdea87e05e8d45bec72a62b047e21,
         type: 2}
@@ -433,7 +649,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4790620687160720, guid: e3ec79548a33b214aa1358d3a6831839, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3ec79548a33b214aa1358d3a6831839, type: 2}
@@ -475,7 +691,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4449156803983454, guid: 67932f938a3f7ff40808c78618de83bf, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1507511191472872, guid: 67932f938a3f7ff40808c78618de83bf, type: 2}
       propertyPath: m_Name
@@ -491,6 +707,72 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67932f938a3f7ff40808c78618de83bf, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1377840440
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2098155022}
+    m_Modifications:
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.6847553
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.3027618
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.078125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896206273915362, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_Name
+      value: Burnable (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.data[0]
+      value: 
+      objectReference: {fileID: 15637779}
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.data[1]
+      value: 
+      objectReference: {fileID: 2034304739}
+    - target: {fileID: 212266847563616682, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1404978687
 Prefab:
@@ -529,7 +811,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4449156803983454, guid: 67932f938a3f7ff40808c78618de83bf, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4449156803983454, guid: 67932f938a3f7ff40808c78618de83bf, type: 2}
       propertyPath: m_LocalScale.x
@@ -541,6 +823,62 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67932f938a3f7ff40808c78618de83bf, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1423064578
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2098155022}
+    m_Modifications:
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.6847553
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.3027618
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.078125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896206273915362, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_Name
+      value: Burnable (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.data[0]
+      value: 
+      objectReference: {fileID: 2126073887}
+    - target: {fileID: 212266847563616682, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1549325135
 Prefab:
@@ -579,7 +917,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4449156803983454, guid: 67932f938a3f7ff40808c78618de83bf, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1507511191472872, guid: 67932f938a3f7ff40808c78618de83bf, type: 2}
       propertyPath: m_Name
@@ -633,7 +971,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4449156803983454, guid: 67932f938a3f7ff40808c78618de83bf, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1507511191472872, guid: 67932f938a3f7ff40808c78618de83bf, type: 2}
       propertyPath: m_Name
@@ -650,41 +988,41 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67932f938a3f7ff40808c78618de83bf, type: 2}
   m_IsPrefabAsset: 0
---- !u!1001 &1783481643
+--- !u!1001 &1599398858
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2098155022}
     m_Modifications:
     - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
         type: 2}
       propertyPath: nearbyBurnables.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.0059433
+      value: 4.6847553
       objectReference: {fileID: 0}
     - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.18049812
+      value: -0.69723815
       objectReference: {fileID: 0}
     - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.078125
       objectReference: {fileID: 0}
     - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
       propertyPath: m_LocalRotation.w
@@ -692,15 +1030,41 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 6.2
+    - target: {fileID: 1896206273915362, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
+      propertyPath: m_Name
+      value: Burnable (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.data[0]
+      value: 
+      objectReference: {fileID: 1658709458}
+    - target: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: nearbyBurnables.Array.data[1]
+      value: 
+      objectReference: {fileID: 2019326819}
+    - target: {fileID: 212266847563616682, guid: edffde935e4fb4e4693261709bf86b52,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edffde935e4fb4e4693261709bf86b52, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1658709458 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 448003248}
+  m_Script: {fileID: 11500000, guid: 9dbd8b12a87d0c348b2f42cf44544e01, type: 3}
+--- !u!4 &1658709461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 448003248}
 --- !u!1001 &1826113552
 Prefab:
   m_ObjectHideFlags: 0
@@ -738,7 +1102,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4731818365574318, guid: 586f92dbac9d52842b37afd78a311ec3, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114311695179687152, guid: 586f92dbac9d52842b37afd78a311ec3,
         type: 2}
@@ -748,3 +1112,70 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 586f92dbac9d52842b37afd78a311ec3, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &2019326817 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 206458101}
+--- !u!114 &2019326819 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 206458101}
+  m_Script: {fileID: 11500000, guid: 9dbd8b12a87d0c348b2f42cf44544e01, type: 3}
+--- !u!114 &2034304739 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 78554050}
+  m_Script: {fileID: 11500000, guid: 9dbd8b12a87d0c348b2f42cf44544e01, type: 3}
+--- !u!4 &2034304742 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 78554050}
+--- !u!1 &2098155021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2098155022}
+  m_Layer: 0
+  m_Name: Burnable Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2098155022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2098155021}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: -1.29, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2034304742}
+  - {fileID: 2126073890}
+  - {fileID: 15637782}
+  - {fileID: 1658709461}
+  - {fileID: 380629657}
+  - {fileID: 2019326817}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2126073887 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114684306664197030, guid: edffde935e4fb4e4693261709bf86b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 1377840440}
+  m_Script: {fileID: 11500000, guid: 9dbd8b12a87d0c348b2f42cf44544e01, type: 3}
+--- !u!4 &2126073890 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4005433488257484, guid: edffde935e4fb4e4693261709bf86b52,
+    type: 2}
+  m_PrefabInternal: {fileID: 1377840440}
