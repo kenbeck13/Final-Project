@@ -44,7 +44,7 @@ public class Switch : MonoBehaviour {
 				attachedDoor.CheckForSwitches();
 			}
 		} 
-		else if (collision.gameObject.tag == "Box")
+		else if (collision.gameObject.tag == "Wooden Box")
 		{
 			if (!isOn) {
 				isOn = true;
@@ -68,7 +68,7 @@ public class Switch : MonoBehaviour {
 				isOn = false;
 			}
 		}
-		else if (collision.gameObject.tag == "Box")
+		else if (collision.gameObject.tag == "Wooden Box")
 		{
 			if (isOn && !isPermanent) {
 				isOn = false;

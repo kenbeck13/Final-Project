@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spellbook : MonoBehaviour {
 
     public string element;
+	public string loadScene;
 
 	// Use this for initialization
 	void Start () {

@@ -12,6 +12,7 @@ public class Slime : MonoBehaviour {
     public bool isFrozen;
     public float iceTimerMax;
     float iceTimer;
+	public float playerDistance;
 
 	// Use this for initialization
 	void Start () {
@@ -20,41 +21,35 @@ public class Slime : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (player.transform.position.x > transform.position.x)
-        {
-            velocity.x = speed;
-        }
-        else
-        {
-            velocity.x = speed * -1;
-        }
+		if (Vector2.Distance (player.transform.position, transform.position) < playerDistance) {
+			if (player.transform.position.x > transform.position.x) {
+				velocity.x = speed;
+			} else {
+				velocity.x = speed * -1;
+			}
 
-        if (velocity.y < downVelocityMax)
-        {
-            velocity.y = downVelocityMax;
-        }
+			if (velocity.y < downVelocityMax) {
+				velocity.y = downVelocityMax;
+			}
 
-        //gravity logic
-        if (!isFrozen)
-        {
-			rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX | ~RigidbodyConstraints2D.FreezePositionY;
-            if (velocity.y > 0)
-            {
-                velocity.y -= gravityUp * Time.deltaTime;
-            }
-            else
-            {
-                velocity.y -= gravityDown * Time.deltaTime;
-            }
-            rb.MovePosition(rb.position + velocity * Time.deltaTime);
-        } else{
-            rb.constraints &= RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
-        }
-        iceTimer -= Time.deltaTime;
+			//gravity logic
+			if (!isFrozen) {
+				rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX | ~RigidbodyConstraints2D.FreezePositionY;
+				if (velocity.y > 0) {
+					velocity.y -= gravityUp * Time.deltaTime;
+				} else {
+					velocity.y -= gravityDown * Time.deltaTime;
+				}
+				rb.MovePosition (rb.position + velocity * Time.deltaTime);
+			} else {
+				rb.constraints &= RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+			}
+			iceTimer -= Time.deltaTime;
 
-        if(iceTimer < 0){
-            isFrozen = false;
-        }
+			if (iceTimer < 0) {
+				isFrozen = false;
+			}
+		}
 	}
 
     private void OnCollisionEnter2D(Collision2D collision)

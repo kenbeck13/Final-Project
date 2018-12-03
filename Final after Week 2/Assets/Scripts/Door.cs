@@ -28,13 +28,18 @@ public class Door : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!isOpen) {
+			rb.constraints &= RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+		}
 
 		if (isOpen && isVertical) {
+			rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 			rb.velocity = transform.up * speed * Time.deltaTime;
 			killTimer -= Time.deltaTime;
 		}
 
 		if (isOpen && !isVertical) {
+			rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 			rb.velocity = transform.right * speed * Time.deltaTime * -1;
 			killTimer -= Time.deltaTime;
 		}

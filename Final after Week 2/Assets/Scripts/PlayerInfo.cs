@@ -90,7 +90,7 @@ public class PlayerInfo : MonoBehaviour {
             {
                 hasIce = true;
             }
-            Destroy(collision.gameObject);
+			SceneManager.LoadScene (spellbookScript.loadScene);
         }
 
 		if (collision.gameObject.tag == "Star")
