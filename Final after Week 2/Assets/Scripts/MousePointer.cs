@@ -21,7 +21,7 @@ public class MousePointer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown (1) && player.hasIce && !player.inWater) {
+		if (Input.GetMouseButtonDown (1) && player.hasIce && !player.inWater && !player.noMagic) {
 			pointerTimer = pointerTimerMax;
 			rend.enabled = true;
 			col.enabled = true;
@@ -31,6 +31,10 @@ public class MousePointer : MonoBehaviour {
 			col.enabled = false;
 		}
 		if (pointerTimer < 0) {
+			rend.enabled = false;
+			col.enabled = false;
+		}
+		if (player.noMagic) {
 			rend.enabled = false;
 			col.enabled = false;
 		}

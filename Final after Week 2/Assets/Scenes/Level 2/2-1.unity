@@ -585,6 +585,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1c0c3eb285f5ad9438b92f9713990d3c, type: 3}
   - {fileID: 21300000, guid: e12abae22d29add4cabae71b66577635, type: 3}
   isShielded: 0
+  nearbyConductors: []
 --- !u!61 &496620317
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1724,6 +1725,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 8.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1402764347739852, guid: ff5ee7a581cfa8644a3aaea0430d3842, type: 2}
+      propertyPath: m_Name
+      value: Energy Shield
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff5ee7a581cfa8644a3aaea0430d3842, type: 2}
   m_IsPrefabAsset: 0
@@ -1880,6 +1885,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1c0c3eb285f5ad9438b92f9713990d3c, type: 3}
   - {fileID: 21300000, guid: e12abae22d29add4cabae71b66577635, type: 3}
   isShielded: 0
+  nearbyConductors: []
 --- !u!61 &1641017565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2377,6 +2383,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1c0c3eb285f5ad9438b92f9713990d3c, type: 3}
   - {fileID: 21300000, guid: e12abae22d29add4cabae71b66577635, type: 3}
   isShielded: 0
+  nearbyConductors: []
 --- !u!61 &1862975923
 BoxCollider2D:
   m_ObjectHideFlags: 0

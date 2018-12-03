@@ -21,6 +21,7 @@ public class PlayerInfo : MonoBehaviour {
 	SpriteRenderer rend;
 	Scene currentScene;
 	string currentSceneName;
+	public bool noMagic;
 
 	// Use this for initialization
 	void Start () {
@@ -49,7 +50,7 @@ public class PlayerInfo : MonoBehaviour {
 		}
 
 		//left click to shoot fire
-        if(Input.GetMouseButtonDown(0) && hasFire && shootTimer < 0){
+		if(Input.GetMouseButtonDown(0) && hasFire && shootTimer < 0 && !noMagic){
             if (isFacingRight)
             {
 				Instantiate(rightFireballPrefab, transform.position + fireballSpawnDistance, Quaternion.identity);
@@ -59,7 +60,7 @@ public class PlayerInfo : MonoBehaviour {
             shootTimer = shootTimerMax;
         }
         //Shift to use lightning
-        if(Input.GetKey(KeyCode.LeftShift) && hasLightning){
+		if(Input.GetKey(KeyCode.LeftShift) && hasLightning && !noMagic){
             lightningAura.SetActive(true);
         }
 		if(Input.GetKeyUp(KeyCode.LeftShift) && hasLightning){
@@ -98,6 +99,11 @@ public class PlayerInfo : MonoBehaviour {
 			Star starScript = collision.gameObject.GetComponent<Star> ();
 			SceneManager.LoadScene (starScript.loadScene);
 		}
+
+		if (collision.gameObject.tag == "EnergyShield")
+		{
+			noMagic = true;
+		}
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -106,6 +112,10 @@ public class PlayerInfo : MonoBehaviour {
         {
             inWater = false;
         }
+		if (collision.gameObject.tag == "EnergyShield")
+		{
+			noMagic = false;
+		}
     }
 
     private void OnTriggerStay2D(Collider2D collision)
