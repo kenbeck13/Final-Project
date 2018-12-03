@@ -67,6 +67,13 @@ public class Switch : MonoBehaviour {
 				attachedDoor.CheckForSwitches ();
 			}
 		}
+		else if (collision.gameObject.tag == "Stone Box")
+		{
+			if (!isOn) {
+				isOn = true;
+				attachedDoor.CheckForSwitches ();
+			}
+		}
 		else if (collision.gameObject.tag == "Slime")
 		{
 			if (!isOn) {
@@ -92,6 +99,12 @@ public class Switch : MonoBehaviour {
 			}
 		}
 		else if (collision.gameObject.tag == "Wooden Box")
+		{
+			if (isOn && !isPermanent) {
+				isOn = false;
+			}
+		}
+		else if (collision.gameObject.tag == "Stone Box")
 		{
 			if (isOn && !isPermanent) {
 				isOn = false;

@@ -52,17 +52,21 @@ public class Burnable : MonoBehaviour {
 			Destroy (collision.gameObject);
 			frozen = false;
 		}
+		if (collision.gameObject.tag == "Pointer" && isOnFire) {
+			isOnFire = false;
+			frozen = true;
+			rend.sprite = sprites [0];
+		}
+	}
+
+	void OnCollisionStay2D(Collision2D collision){
 		if (collision.gameObject.tag == "Wooden Box") {
+			Debug.Log ("Collision");
 			Burnable burnableScript = collision.gameObject.GetComponent<Burnable> ();
 			if (burnableScript.isBurning) {
 				isOnFire = true;
 				frozen = false;
 			}
-		}
-		if (collision.gameObject.tag == "Pointer" && isOnFire) {
-			isOnFire = false;
-			frozen = true;
-			rend.sprite = sprites [0];
 		}
 	}
 }

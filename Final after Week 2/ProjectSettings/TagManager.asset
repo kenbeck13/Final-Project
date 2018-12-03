@@ -16,6 +16,7 @@ TagManager:
   - Spellbook
   - Wooden Box
   - Star
+  - Stone Box
   layers:
   - Default
   - TransparentFX
