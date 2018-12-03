@@ -15,6 +15,8 @@ public class Switch : MonoBehaviour {
 	//is this switch shielded?
 	public bool isShielded;
 
+	public Conductor[] nearbyConductors;
+
 	SpriteRenderer rend;
 
 
@@ -33,11 +35,25 @@ public class Switch : MonoBehaviour {
 		} else {
 			rend.sprite = sprites [0];
 		}
+
+		for (int i = 0; i < nearbyConductors.Length; i++) {
+			if (nearbyConductors [i].turnsOnSwitches) {
+				isOn = true;
+				attachedDoor.CheckForSwitches();
+			}
+		}
 	}
 
 	private void OnTriggerStay2D(Collider2D collision)
 	{
 		if (collision.gameObject.tag == "Player")
+		{
+			if (!isOn) {
+				isOn = true;
+				attachedDoor.CheckForSwitches();
+			}
+		} 
+		if (collision.gameObject.tag == "Pointer")
 		{
 			if (!isOn) {
 				isOn = true;
@@ -88,6 +104,12 @@ public class Switch : MonoBehaviour {
 			}
 		}
 		else if (collision.gameObject.tag == "Fire")
+		{
+			if (isOn && !isPermanent) {
+				isOn = false;
+			}
+		}
+		else if (collision.gameObject.tag == "Pointer")
 		{
 			if (isOn && !isPermanent) {
 				isOn = false;

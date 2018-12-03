@@ -14,6 +14,7 @@ public class Conductor : MonoBehaviour {
 	SpriteRenderer rend;
 	public Conductor[] nearbyConductors;
 	public bool isWater;
+	public bool turnsOnSwitches;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +35,7 @@ public class Conductor : MonoBehaviour {
 				rend.sprite = sprites [1];
 			}
 			isPowered = false;
+			turnsOnSwitches = true;
 		}
 
 		if (isElectrified) {
@@ -41,6 +43,7 @@ public class Conductor : MonoBehaviour {
 		}
 
 		if (elecTimer < 0) {
+			turnsOnSwitches = false;
 			isElectrified = false;
 			if (!isWater) {
 				rend.sprite = sprites [0];
