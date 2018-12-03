@@ -17,6 +17,8 @@ TagManager:
   - Wooden Box
   - Star
   - Stone Box
+  - Exit
+  - Spawned Slime
   layers:
   - Default
   - TransparentFX

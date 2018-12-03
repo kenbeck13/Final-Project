@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 2/2-2.unity
     guid: 8029e933710326b4baf15da11a21eb5f
   - enabled: 1
+    path: Assets/Scenes/Level 2/2-3.unity
+    guid: 80f092080b3b4438f99bf1bb37a3954c
+  - enabled: 1
     path: Assets/Scenes/Level 2/IceTutorial.unity
     guid: 0bed46569f8e5bb40bb8135f2c384013
   - enabled: 1
@@ -45,9 +48,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 3/3-2.unity
     guid: bda7f40ac990e9243b17a7e4f61f6b2a
   - enabled: 1
+    path: Assets/Scenes/Level 3/3-3.unity
+    guid: 3c0792580459241f8b10da565ee3eae1
+  - enabled: 1
     path: Assets/Scenes/Level 3/LightningTutorial.unity
     guid: 45e4cfadb02a33342b9767484c44a9be
   - enabled: 1
     path: Assets/Scenes/Level 4/4-1.unity
     guid: 8cd88309c27ba5d459f7c765343a564f
+  - enabled: 1
+    path: Assets/Scenes/Level 4/4-2.unity
+    guid: 7d645121c9540419ea2edcfe4c104d32
+  - enabled: 1
+    path: Assets/Scenes/Level 4/4-3.unity
+    guid: 08f6a85d4e1f549439864627eecad464
   m_configObjects: {}

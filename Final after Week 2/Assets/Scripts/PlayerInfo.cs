@@ -94,11 +94,11 @@ public class PlayerInfo : MonoBehaviour {
 			SceneManager.LoadScene (spellbookScript.loadScene);
         }
 
-		if (collision.gameObject.tag == "Star")
-		{
-			Star starScript = collision.gameObject.GetComponent<Star> ();
-			SceneManager.LoadScene (starScript.loadScene);
-		}
+        if (collision.gameObject.tag == "Exit")
+        {
+            Star starScript = collision.gameObject.GetComponent<Star>();
+            SceneManager.LoadScene(starScript.loadScene);
+        }
 
 		if (collision.gameObject.tag == "EnergyShield")
 		{
