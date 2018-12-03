@@ -15,11 +15,13 @@ public class Conductor : MonoBehaviour {
 	public Conductor[] nearbyConductors;
 	public bool isWater;
 	public bool turnsOnSwitches;
+	Water waterScript;
 
 	// Use this for initialization
 	void Start () {
 		rend = GetComponent<SpriteRenderer> ();
 		elecTimer = elecTimerMax;
+		waterScript = GetComponent<Water> ();
 	}
 
 	// Update is called once per frame
@@ -50,10 +52,17 @@ public class Conductor : MonoBehaviour {
 			}
 			elecTimer = elecTimerMax;
 		}
-
-		for (int i = 0; i < nearbyConductors.Length; i++) {
-			if (nearbyConductors [i].isPowered) {
-				isElectrified = true;
+		if (!isWater) {
+			for (int i = 0; i < nearbyConductors.Length; i++) {
+				if (nearbyConductors [i].isPowered) {
+					isElectrified = true;
+				}
+			}
+		} else if(isWater && !waterScript.isFrozen) {
+			for (int i = 0; i < nearbyConductors.Length; i++) {
+				if (nearbyConductors [i].isPowered) {
+					isElectrified = true;
+				}
 			}
 		}
 	}
