@@ -27,4 +27,24 @@ public class Fireball : MonoBehaviour {
 	void Update () {
         rb.velocity = transform.right * speed * Time.deltaTime;
 	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "EnergyShield")
+		{
+			Destroy (gameObject);
+		}
+		if (collision.gameObject.tag == "Platform")
+		{
+			Destroy (gameObject);
+		}
+		if (collision.gameObject.tag == "Switch")
+		{
+			Destroy (gameObject);
+		}
+		if (collision.gameObject.tag == "Door")
+		{
+			Destroy (gameObject);
+		}
+	}
 }
