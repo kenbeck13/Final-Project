@@ -19,6 +19,8 @@ TagManager:
   - Stone Box
   - Exit
   - Spawned Slime
+  - Battery
+  - FireShield
   layers:
   - Default
   - TransparentFX

@@ -9,7 +9,6 @@ public class SpawnedSlime : MonoBehaviour {
     public float iceTimerMax;
     float iceTimer;
     public float moveSpeed;
-    public float killTimer;
     SpriteRenderer rend;
     public Sprite[] sprites;
 
@@ -34,9 +33,8 @@ public class SpawnedSlime : MonoBehaviour {
 
 
         iceTimer -= Time.deltaTime;
-        killTimer -= Time.deltaTime;
 
-        if(killTimer < 0){
+		if(transform.position.y < -20){
             Destroy(gameObject);
         }
     }

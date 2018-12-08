@@ -49,6 +49,10 @@ public class MousePointer : MonoBehaviour {
 			rend.enabled = false;
 			col.enabled = false;
 		}
+		if (collision.gameObject.tag == "FireShield") {
+			rend.enabled = false;
+			col.enabled = false;
+		}
 	}
 
 }

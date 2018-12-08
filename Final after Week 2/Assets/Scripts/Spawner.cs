@@ -10,7 +10,6 @@ public class Spawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        spawnTimer = spawnTimerMax;
 	}
 	
 	// Update is called once per frame

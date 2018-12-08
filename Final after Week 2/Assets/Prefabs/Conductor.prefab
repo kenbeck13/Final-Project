@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212576954738337394}
   - component: {fileID: 61939055678544046}
   - component: {fileID: 114532822877007532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Conductor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,16 +80,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isElectrified: 0
   isPowered: 0
-  elecTimerMax: 2
+  elecTimerMax: 1
   elecTimer: 0
-  whenPowered: 1.6
-  whenVisualAppear: 1
+  whenPowered: 0.8
+  whenVisualAppear: 0.5
   sprites:
   - {fileID: 21300000, guid: ff4922b46428f2e488b32030e26b82cf, type: 3}
   - {fileID: 21300000, guid: bf8f5b60e1c7e7c4ebf4d5333a74b8c0, type: 3}
   nearbyConductors:
   - {fileID: 0}
   isWater: 0
+  turnsOnSwitches: 0
 --- !u!212 &212576954738337394
 SpriteRenderer:
   m_ObjectHideFlags: 1

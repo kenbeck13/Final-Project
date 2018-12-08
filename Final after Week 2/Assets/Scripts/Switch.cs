@@ -15,6 +15,10 @@ public class Switch : MonoBehaviour {
 	//is this switch shielded?
 	public bool isShielded;
 
+	public float elecTimerMax;
+	public float elecTimer;
+	bool wasElectrified;
+
 	public Conductor[] nearbyConductors;
 
 	SpriteRenderer rend;
@@ -32,6 +36,7 @@ public class Switch : MonoBehaviour {
 	void Update () {
 		if (isOn) {
 			rend.sprite = sprites [1];
+			elecTimer -= Time.deltaTime;
 		} else {
 			rend.sprite = sprites [0];
 		}
@@ -40,7 +45,14 @@ public class Switch : MonoBehaviour {
 			if (nearbyConductors [i].turnsOnSwitches) {
 				isOn = true;
 				attachedDoor.CheckForSwitches();
+				elecTimer = elecTimerMax;
+				wasElectrified = true;
 			}
+		}
+
+		if (elecTimer < 0 && wasElectrified) {
+			isOn = false;
+			wasElectrified = false;
 		}
 	}
 

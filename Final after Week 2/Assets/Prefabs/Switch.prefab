@@ -115,6 +115,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1c0c3eb285f5ad9438b92f9713990d3c, type: 3}
   - {fileID: 21300000, guid: e12abae22d29add4cabae71b66577635, type: 3}
   isShielded: 0
+  elecTimerMax: 0.2
+  elecTimer: 0
+  nearbyConductors: []
 --- !u!212 &212819465502448196
 SpriteRenderer:
   m_ObjectHideFlags: 1

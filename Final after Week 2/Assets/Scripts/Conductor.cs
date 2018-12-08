@@ -87,5 +87,20 @@ public class Conductor : MonoBehaviour {
 		if (collision.gameObject.tag == "Fire" && !isWater) {
 			Destroy (collision.gameObject);
 		}
+		if (collision.gameObject.tag == "Battery") {
+			Battery batteryScript = collision.gameObject.GetComponent<Battery> ();
+			if (batteryScript.isElectrified) {
+				isElectrified = true;
+			}
+		}
+	}
+
+	void OnCollisionStay2D(Collision2D collision){
+		if (collision.gameObject.tag == "Battery") {
+			Battery batteryScript = collision.gameObject.GetComponent<Battery> ();
+			if (batteryScript.isElectrified) {
+				isElectrified = true;
+			}
+		}
 	}
 }
