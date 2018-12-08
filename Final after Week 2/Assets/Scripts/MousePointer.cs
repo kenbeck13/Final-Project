@@ -9,6 +9,7 @@ public class MousePointer : MonoBehaviour {
 	public float pointerTimerMax;
 	float pointerTimer;
     public PlayerInfo player;
+	public float degreesPerSecond;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,7 @@ public class MousePointer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		transform.Rotate (Vector3.forward, degreesPerSecond * Time.deltaTime);
 		if (Input.GetMouseButtonDown (1) && player.hasIce && !player.inWater && !player.noMagic) {
 			pointerTimer = pointerTimerMax;
 			rend.enabled = true;

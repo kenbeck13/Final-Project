@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerTimerMax: 1.5
   player: {fileID: 0}
+  degreesPerSecond: 180
 --- !u!212 &212378477004809328
 SpriteRenderer:
   m_ObjectHideFlags: 1
