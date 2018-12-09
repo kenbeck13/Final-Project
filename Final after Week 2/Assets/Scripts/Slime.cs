@@ -38,11 +38,12 @@ public class Slime : MonoBehaviour
                 velocity.x = speed * -1;
             }
 
-            if (velocity.y < downVelocityMax)
-            {
-                velocity.y = downVelocityMax;
-            }
         }
+
+		if (velocity.y < downVelocityMax)
+		{
+			velocity.y = downVelocityMax;
+		}
 
         //gravity logic
         if (velocity.y > 0)

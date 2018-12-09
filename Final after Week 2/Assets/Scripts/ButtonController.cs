@@ -18,6 +18,9 @@ public class ButtonController : MonoBehaviour {
 	public void SwitchtoControlScene(){
 		SceneManager.LoadScene ("Controls");
 	}
+	public void SwitchtoCreditsScene(){
+		SceneManager.LoadScene ("Credits");
+	}
 	public void SwitchtoStartScene(){
 		SceneManager.LoadScene ("StartScreen");
 	}
