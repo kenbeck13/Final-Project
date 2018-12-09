@@ -22,6 +22,8 @@ public class PlayerInfo : MonoBehaviour {
 	Scene currentScene;
 	string currentSceneName;
 	public bool noMagic;
+	AudioSource source;
+	public AudioClip[] clips;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +31,7 @@ public class PlayerInfo : MonoBehaviour {
         lightningAura.SetActive(false);
         isFacingRight = true;
         movementScript = GetComponent<PlayerMovement>();
+		source = GetComponent<AudioSource> ();
 
 		currentScene = SceneManager.GetActiveScene ();
 		currentSceneName = currentScene.name;
@@ -51,6 +54,9 @@ public class PlayerInfo : MonoBehaviour {
 
 		//left click to shoot fire
 		if(Input.GetMouseButtonDown(0) && hasFire && shootTimer < 0 && !noMagic){
+			source.clip = clips [0];
+			source.Play ();
+			source.loop = false;
             if (isFacingRight)
             {
 				Instantiate(rightFireballPrefab, transform.position + fireballSpawnDistance, Quaternion.identity);
@@ -63,9 +69,15 @@ public class PlayerInfo : MonoBehaviour {
 		if(Input.GetKey(KeyCode.LeftShift) && hasLightning && !noMagic){
             lightningAura.SetActive(true);
         }
+		if (Input.GetKeyDown (KeyCode.LeftShift) && hasLightning && !noMagic) {
+			source.clip = clips [1];
+			source.Play ();
+			source.loop = true;
+		}
 		if(Input.GetKeyUp(KeyCode.LeftShift) && hasLightning){
             lightningAura.SetActive(false);
             inWater = false;
+			source.Stop ();
         }
 
 		if (Input.GetKeyDown (KeyCode.R)) {
@@ -125,4 +137,15 @@ public class PlayerInfo : MonoBehaviour {
             inWater = true;
         }
     }
+
+	private void OnCollisionEnter2D(Collision2D collision){
+		if (collision.gameObject.tag == "Slime") {
+			Slime slimeScript = collision.gameObject.GetComponent<Slime> ();
+			if (!slimeScript.isFrozen) {
+				source.clip = clips [2];
+				source.Play ();
+				source.loop = false;
+			}
+		}
+	}
 }

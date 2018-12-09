@@ -103,7 +103,7 @@ MonoBehaviour:
   speed: 2
   gravityUp: 20
   gravityDown: 50
-  downVelocityMax: -12
+  downVelocityMax: -6
   player: {fileID: 0}
   isFrozen: 0
   iceTimerMax: 5

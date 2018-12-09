@@ -10,11 +10,13 @@ public class MousePointer : MonoBehaviour {
 	float pointerTimer;
     public PlayerInfo player;
 	public float degreesPerSecond;
+	AudioSource source;
 
 	// Use this for initialization
 	void Start () {
 		rend = GetComponent<SpriteRenderer> ();
 		col = GetComponent<CircleCollider2D> ();
+		source = GetComponent<AudioSource> ();
 		rend.enabled = false;
 		col.enabled = false;
 		pointerTimer = 0;
@@ -27,10 +29,12 @@ public class MousePointer : MonoBehaviour {
 			pointerTimer = pointerTimerMax;
 			rend.enabled = true;
 			col.enabled = true;
+			source.Play ();
 		}
 		if (Input.GetMouseButtonUp (1)) {
 			rend.enabled = false;
 			col.enabled = false;
+			source.Stop ();
 		}
 		if (pointerTimer < 0) {
 			rend.enabled = false;

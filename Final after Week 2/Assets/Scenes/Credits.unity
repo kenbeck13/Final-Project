@@ -380,7 +380,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Art and Audio Director\n\tDaniel Giaramita\nProgramming and Level Design\n\tKenneth
     Beck\nMusic\n\tKevin MacLeod\nSound - Open Game Art\n\tFireball - Julien Matthey\n\tIce
-    - bart\n\tLightning - digitl\n\tBounce - Blender Foundation\n\tJump - dklon"
+    - bart\n\tLightning - digitl\n\tBounce - Blender Foundation"
 --- !u!222 &472643986
 CanvasRenderer:
   m_ObjectHideFlags: 0
