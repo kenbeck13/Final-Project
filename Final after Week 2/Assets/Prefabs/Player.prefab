@@ -216,7 +216,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.02
+  m_Volume: 0.415
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -337,6 +337,8 @@ MonoBehaviour:
   downVelocityMax: -12
   jumps: 0
   maxJumps: 1
+  maxAnimTimer: 0
+  animTimer: 0
 --- !u!114 &114815557762830530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -362,8 +364,8 @@ MonoBehaviour:
   fireballSpawnDistance: {x: 1, y: 0, z: 0}
   noMagic: 0
   clips:
-  - {fileID: 8300000, guid: 73ff9c610bf551742837797e233a2178, type: 3}
-  - {fileID: 8300000, guid: c7c9a85e6a3789344bd2b97986447cee, type: 3}
+  - {fileID: 8300000, guid: 23b763f927f08c143872494634955da8, type: 3}
+  - {fileID: 8300000, guid: 0feda89da6283db4891685c769494245, type: 3}
   - {fileID: 8300000, guid: b5c363b1525483c4d84fffb0b7677810, type: 3}
 --- !u!212 &212212357208138250
 SpriteRenderer:
