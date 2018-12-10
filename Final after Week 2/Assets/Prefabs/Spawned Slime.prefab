@@ -81,7 +81,6 @@ MonoBehaviour:
   isFrozen: 0
   iceTimerMax: 5
   moveSpeed: -6
-  killTimer: 10
   sprites:
   - {fileID: 21300000, guid: 8463770bb995ee34ca4b81cecb004b84, type: 3}
   - {fileID: 21300000, guid: fe310389895c3574299fe0fadc3f0887, type: 3}
@@ -123,7 +122,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: 8463770bb995ee34ca4b81cecb004b84, type: 3}
   m_Color: {r: 1, g: 0.44458815, b: 0.4292453, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5

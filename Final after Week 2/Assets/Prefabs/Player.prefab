@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114815557762830530}
   - component: {fileID: 70762334675545796}
   - component: {fileID: 82778730956976460}
+  - component: {fileID: 95305517337158434}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -86,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1193321102349834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -12.05, z: 0}
+  m_LocalPosition: {x: 0, y: 0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4100070438012846}
@@ -215,7 +216,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -299,6 +300,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &95305517337158434
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1193321102349834}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fabeca4449b0f644d8bc065db117cd64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114563142964541760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,9 +348,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba924a1cc2e504814a6346b6cfd9b8a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasFire: 0
-  hasLightning: 0
-  hasIce: 0
+  hasFire: 1
+  hasLightning: 1
+  hasIce: 1
   inWater: 0
   lightningAura: {fileID: 1573456880876274}
   rightFireballPrefab: {fileID: 1893690058676900, guid: a0890c9e1df674898bfc0a0850aea123,

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50335157157339832}
   - component: {fileID: 114764083940299040}
   - component: {fileID: 61570158254121360}
+  - component: {fileID: 95783941712978356}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Slime
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1140727330308512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.84, y: -4.55, z: 0}
+  m_LocalPosition: {x: 5.66, y: -1.02, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,6 +89,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.41875, y: 1.0229871}
   m_EdgeRadius: 0
+--- !u!95 &95783941712978356
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1140727330308512}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad0ed2b028e47e842b1eece7f7ab1c56, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114764083940299040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,11 +122,11 @@ MonoBehaviour:
   speed: 2
   gravityUp: 20
   gravityDown: 50
-  downVelocityMax: -6
+  downVelocityMax: -8
   player: {fileID: 0}
   isFrozen: 0
   iceTimerMax: 5
-  playerDistance: 0
+  playerDistance: 10
   sprites:
   - {fileID: 21300000, guid: 8463770bb995ee34ca4b81cecb004b84, type: 3}
   - {fileID: 21300000, guid: fe310389895c3574299fe0fadc3f0887, type: 3}

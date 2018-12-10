@@ -16,12 +16,14 @@ public class Slime : MonoBehaviour
     public float playerDistance;
     public Sprite[] sprites;
     SpriteRenderer rend;
+	Animator anim;
 
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
+		anim = GetComponent<Animator> ();
     }
 
     // Update is called once per frame
@@ -58,9 +60,11 @@ public class Slime : MonoBehaviour
         if(isFrozen){
             velocity.x = 0;
             rend.sprite = sprites[1];
+			anim.SetBool ("frozenAnim", true);
         }
         else{
             rend.sprite = sprites[0];
+			anim.SetBool ("frozenAnim", false);
         }
 
         rb.MovePosition(rb.position + velocity * Time.deltaTime);
